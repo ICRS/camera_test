@@ -1,0 +1,12 @@
+services:
+  ros-usb-cam:
+    build:
+      context: .
+    container_name: ros-usb-cam
+    privileged: true
+    devices:
+      - /dev/video4:/dev/video4
+    environment:
+      - DEBIAN_FRONTEND=noninteractive
+    command: >
+      bash -c "ros2 run usb_cam usb_cam_node_exe --ros-args --params-file camera.yaml"
