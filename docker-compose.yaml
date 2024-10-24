@@ -3,6 +3,7 @@ services:
     build:
       context: .
     container_name: ros-usb-cam
+    network_mode: host
     privileged: true
     devices:
       - /dev/video0:/dev/video0
