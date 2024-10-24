@@ -5,7 +5,7 @@ services:
     container_name: ros-usb-cam
     privileged: true
     devices:
-      - /dev/video4:/dev/video4
+      - /dev/video0:/dev/video0
     environment:
       - DEBIAN_FRONTEND=noninteractive
     command: >
